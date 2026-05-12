@@ -1074,15 +1074,115 @@ footer p {
 
 
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:24px 40px;
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 1400px;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 }
 
-.logo{
-  font-size:24px;
-  font-weight:900;
-  color:#241713;
+/* SOL YAZI */
+.navbar-left h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* ORTA MENU */
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* SAG TARAF */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* BOOK NOW */
+.book-btn {
+    background: #222;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* IKONLAR */
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icons a {
+    color: #111;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.6;
+}
+
+/* MOBIL */
+@media(max-width: 900px){
+
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .social-icons{
+        display:none;
+    }
+
+    .book-btn{
+        padding:10px 18px;
+        font-size:0.85rem;
+    }
+
+    .navbar-left h2{
+        font-size:0.9rem;
+    }
 }
