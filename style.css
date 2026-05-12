@@ -16,83 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-.navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:24px 40px;
-    background:#f5f0eb;
-    border-radius:32px;
-    margin:20px;
-    position:sticky;
-    top:10px;
-    z-index:1000;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-.logo img{
-    width:120px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-}
-
-.nav-links{
-    display:flex;
-    gap:28px;
-    align-items:center;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#2a1612;
-    font-weight:600;
-    font-size:15px;
-}
-
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:18px;
-}
-
-@media (max-width:768px){
-
-    .navbar{
-        flex-direction:column;
-        gap:18px;
-        padding:22px;
-        border-radius:28px;
-    }
-
-    .logo img{
-        width:95px;
-    }
-
-    .nav-right{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px;
-    }
-
-    .nav-links{
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:18px;
-    }
-
-    .nav-links a{
-        font-size:14px;
-    }
-}
-
-.nav-links a:hover { color: #a56f45; }
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 
 .socials,
 .footer-socials {
@@ -1185,4 +1108,70 @@ footer p {
       justify-content:center;
       gap:10px;
    }
+}
+
+/* PREMIUM NAVBAR */
+
+.navbar{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    padding:24px;
+    background:#f5f0eb;
+    border-radius:30px;
+    margin:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+
+.logo img{
+    width:90px;
+    height:auto;
+    display:block;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.nav-links{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#2a1612;
+    font-weight:600;
+    font-size:15px;
+}
+
+@media (min-width:769px){
+
+    .navbar{
+        flex-direction:row;
+        justify-content:space-between;
+        padding:24px 40px;
+    }
+
+    .logo{
+        width:auto;
+    }
+
+    .logo img{
+        width:115px;
+    }
 }
